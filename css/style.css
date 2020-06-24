@@ -425,8 +425,10 @@ img {
 
 .social__list-link {
     height: 44px;
+    width: 44px;
     background: #fff;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .social__list-link:hover,
@@ -520,32 +522,13 @@ img {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
-}
-
-.social--second {
-    display: flex;
-    justify-content: center;
-    margin: -5px;
-}
-
-.social__list--second {
-    padding: 5px;
+    display: block;
 }
 
 .social__list-link--second {
     height: 44px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-}
-
-.social__list-link--second:hover,
-.social__list-link--second:focus {
-    background: #2196F3;
-}
-
-.social__svg--second:hover,
-.social__svg--second:focus {
-    fill: #fff;
 }
 
 .social__svg--second {
