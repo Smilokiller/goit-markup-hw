@@ -242,6 +242,9 @@ img {
 
 .nav__list-item {
     margin: 0 25px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav__list-link {
@@ -266,6 +269,9 @@ img {
 
 .list__link-text {
     margin-left: 10px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact__list {
@@ -460,6 +466,9 @@ img {
     background: #fff;
     border-radius: 50%;
     overflow: hidden;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social__list-link:hover,
@@ -472,6 +481,9 @@ img {
     height: 44px;
     fill: #AFB1B8;
     padding: 12px;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social__svg:hover,
@@ -493,6 +505,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards__list-link:hover,
@@ -509,6 +524,9 @@ img {
     height: 100%;
     padding: 15%;
     fill: #AFB1B8;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards__list-svg:hover,
@@ -630,6 +648,9 @@ img {
     background: #F5F4FA;
     border-radius: 4px;
     margin: 0 4px;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons__list-link:hover,
@@ -670,6 +691,9 @@ img {
 
 .examples__content {
     border: 1px solid #EEEEEE;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .examples__content:focus,
