@@ -390,9 +390,11 @@ img {
 .about__list {
     width: 370px;
     margin: 15px;
+    position: relative;
 }
 
 .about__list-link {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,6 +402,8 @@ img {
     color: #FFFFFF;
     background: rgba(47, 48, 58, 0.8);
     height: 70px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .layout__sect-blocks {
