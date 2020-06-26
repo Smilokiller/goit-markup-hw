@@ -705,6 +705,12 @@ img {
     text-transform: none;
 }
 
+.examples__text-text {
+    line-height: 1.8em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+}
+
 .examples__content {
     border: 1px solid #EEEEEE;
     transition-property: all;
