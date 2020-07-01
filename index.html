@@ -63,8 +63,10 @@
     <main class="layout">
         <section class="layout__sect">
             <div class="container container-hero">
-                <h1 class="container__hero-title">Эффективные решения для вашего бизнеса</h1>
-                <a href="#inline" class="button button-hero">Заказать услугу</a>
+                <div class="hero__text">
+                    <h1 class="hero__text-title">Эффективные решения для вашего бизнеса</h1>
+                    <a href="#inline" class="button button-hero" data-modal-open>Заказать услугу</a>
+                </div>
             </div>
         </section>
 
@@ -381,7 +383,59 @@
 
 
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop__modal">
+            <div class="backdrop__button">
+                <a href="" class="backdrop__button-close"><svg class="backdrop__button-svg">
+                <use xlink:href="./images/symbol-modal.svg#icon-close"></use>
+            </svg>
+         </a>
+            </div>
+            <h2 class="backdrop__modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form id="form" action="#" method="post" name="contact">
+                <ul class="form__list">
+                    <li class="form__list-input">
+                        <input class="form__txt" id="name" name="name" type="name" pattern="[A-Za-zА-Яа-яЁё]">
+                        <label class="form__txt-label" for="name">Имя</label>
+                        <div class="form__img">
+                            <svg class="form__img-svg">
+                                <use xlink:href="./images/symbol-modal.svg#icon-form-name"></use>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="form__list-input">
+                        <input class="form__txt" id="tel" name="tel" type="tel" pattern="[0-9]{10,15}">
+                        <label class="form__txt-label" for="tel">Телефон</label>
+                        <div class="form__img">
+                            <svg class="form__img-svg">
+                                <use xlink:href="./images/symbol-modal.svg#icon-form-telephone"></use>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="form__list-input">
+                        <input class="form__txt" id="email" name="email" type="email">
+                        <label class="form__txt-label" for="email">Почта</label>
+                        <div class="form__img">
+                            <svg class="form__img-svg">
+                                <use xlink:href="./images/symbol-modal.svg#icon-form-mail"></use>
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+                <textarea class="form__txtarea" name="msg" placeholder="Комментарий"></textarea>
+                <div class="form__checkbox">
+                    <input class="form__checkbox-input" id="checkbox" name="checkbox" type="checkbox">
+                    <label for="checkbox" class="checkbox-text">Соглашаюсь с рассылкой и принимаю  <a href="" class="form__checkbox-link"> Условия договора</a></label>
+                </div>
+                <div class="backdrop__button">
+                    <a href="" class="button backdrop__button-modal" data-modal-close>
+                        <p>Отправить</p>
+                    </a>
+                </div>
 
+            </form>
+        </div>
+    </div>
     <script src="./js/modal.js"></script>
 </body>
 
