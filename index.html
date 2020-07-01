@@ -363,7 +363,9 @@
                     <p class="footer__title">Подпишитесь на рассылку</p>
                     <ul class="form">
                         <li class="form-item">
-                            <input class="input" value="E-mail">
+                            <form id="form-footer" action="#" method="post" name="footer">
+                                <input class="input" value="E-mail">
+                            </form>
                         </li>
                         <li class="form-item">
                             <a href="" class="button footer-button">
@@ -421,8 +423,12 @@
                             </svg>
                         </div>
                     </li>
+
+                    <li class="form__list-input">
+                        <textarea class="form__txtarea" id="comment" name="msg"></textarea>
+                        <label class="form__txtarea-label" for="comment">Комментарий</label>
+                    </li>
                 </ul>
-                <textarea class="form__txtarea" name="msg" placeholder="Комментарий"></textarea>
                 <div class="form__checkbox">
                     <input class="form__checkbox-input" id="checkbox" name="checkbox" type="checkbox">
                     <label for="checkbox" class="checkbox-text">Соглашаюсь с рассылкой и принимаю  <a href="" class="form__checkbox-link"> Условия договора</a></label>

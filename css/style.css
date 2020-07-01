@@ -936,6 +936,25 @@
             color: #2196F3;
         }
         
+        .form__txtarea-label {
+            position: absolute;
+            top: 10%;
+            left: 3%;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+            transition-property: all;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .form__txtarea:focus+.form__txtarea-label {
+            font-size: 12px;
+            line-height: 14px;
+            transform: translate(0, -30px);
+            color: #2196F3;
+        }
+        
         .form__img {
             position: absolute;
             top: 14px;
