@@ -929,7 +929,8 @@
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .form__txt:focus+.form__txt-label {
+        .form__txt:focus+.form__txt-label,
+        .form__txt:not(:placeholder-shown)+.form__txt-label {
             font-size: 12px;
             line-height: 14px;
             transform: translate(-30px, -30px);
@@ -948,7 +949,8 @@
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .form__txtarea:focus+.form__txtarea-label {
+        .form__txtarea:focus+.form__txtarea-label,
+        .form__txtarea:not(:placeholder-shown)+.form__txtarea-label {
             font-size: 12px;
             line-height: 14px;
             transform: translate(0, -30px);
@@ -1008,8 +1010,4 @@
             transition-property: all;
             transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        input:placeholder-shown {
-            background-color: red;
         }
