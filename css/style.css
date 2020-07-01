@@ -786,20 +786,36 @@
             width: 100%;
             background: rgba(0, 0, 0, 0.2);
             transition-property: all;
-            transition-duration: 250ms;
+            transition-duration: 1s;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .backdrop__modal {
+        .modal-animate {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            display: flex;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .backdrop__modal {
+            position: relative;
+            margin: auto;
             background: #fff;
             width: 528px;
             height: 581px;
             padding: 40px;
             border-radius: 4px;
+            transition: .4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+            transform: translateY(0);
+        }
+        
+        .backdrop.is-hidden .backdrop__modal {
+            pointer-events: none;
+            transition: opacity 0.5s cubic-bezier(.17, .67, .85, -0.76) 2s;
+            opacity: 0;
+            transform: translate(-100%, -100%);
         }
         
         .backdrop__modal-title {
