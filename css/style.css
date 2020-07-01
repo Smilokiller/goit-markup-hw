@@ -341,13 +341,14 @@
             background-size: cover;
             height: 600px;
             max-width: 1920px;
+            padding-top: 0;
         }
         
         .hero__text {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -100%);
         }
         
         .hero__text-title {
