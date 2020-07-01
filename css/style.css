@@ -169,6 +169,10 @@
             text-decoration: none;
         }
         
+        button {
+            border: hidden;
+        }
+        
         h1,
         h2,
         h3,
@@ -785,9 +789,7 @@
             height: 100%;
             width: 100%;
             background: rgba(0, 0, 0, 0.2);
-            transition-property: all;
-            transition-duration: 1s;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
         }
         
         .modal-animate {
@@ -807,13 +809,12 @@
             height: 581px;
             padding: 40px;
             border-radius: 4px;
-            transition: .4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-            transform: translateY(0);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
         }
         
         .backdrop.is-hidden .backdrop__modal {
             pointer-events: none;
-            transition: opacity 0.5s cubic-bezier(.17, .67, .85, -0.76) 2s;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
             opacity: 0;
             transform: translate(-100%, -100%);
         }
@@ -881,8 +882,12 @@
         }
         
         .backdrop.is-hidden {
+            visibility: hidden;
             opacity: 0;
             pointer-events: none;
+            transition-property: all;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .backdrop__button {

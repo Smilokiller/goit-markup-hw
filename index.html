@@ -389,13 +389,13 @@
         <div class="modal-animate is-hidden">
             <div class="backdrop__modal is-hidden">
                 <div class="backdrop__button">
-                    <a href="" class="backdrop__button-close"><svg class="backdrop__button-svg">
+                    <a href="javascript:void(0)" data-modal-close="" class="backdrop__button-close"><svg class="backdrop__button-svg">
                 <use xlink:href="./images/symbol-modal.svg#icon-close"></use>
             </svg>
          </a>
                 </div>
                 <h2 class="backdrop__modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-                <form id="form" action="#" method="post" name="contact">
+                <form id="form" action="" method="post" name="contact">
                     <ul class="form__list">
                         <li class="form__list-input">
                             <input class="form__txt" id="name" name="name" type="name" pattern="[A-Za-zА-Яа-яЁё]" placeholder="">
@@ -435,9 +435,9 @@
                         <label for="checkbox" class="checkbox-text">Соглашаюсь с рассылкой и принимаю  <a href="" class="form__checkbox-link"> Условия договора</a></label>
                     </div>
                     <div class="backdrop__button">
-                        <a href="" class="button backdrop__button-modal" data-modal-close>
+                        <button type="Submit" href="" class="button backdrop__button-modal">
                             <p>Отправить</p>
-                        </a>
+                        </button>
                     </div>
 
                 </form>
