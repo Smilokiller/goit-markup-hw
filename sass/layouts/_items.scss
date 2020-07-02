@@ -1,0 +1,22 @@
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: -15px;
+    &__list {
+        width: 270px;
+        margin: 15px;
+        &-svg {
+            padding: 10%;
+            background: #F5F4FA;
+        }
+    }
+    &__list-title {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    &__list-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

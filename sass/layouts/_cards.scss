@@ -1,0 +1,38 @@
+.cards {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.cards__list {
+    margin: 0 15px;
+    &-link {
+        border: 1px solid $grey;
+        box-sizing: border-box;
+        width: 170px;
+        height: 90px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-property: all;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            border: 1px $blue solid;
+            border-radius: 4px;
+        }
+    }
+    &-svg {
+        height: 100%;
+        padding: 15%;
+        fill: $grey;
+        transition-property: all;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            fill: $blue;
+        }
+    }
+}

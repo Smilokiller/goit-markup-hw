@@ -1,0 +1,47 @@
+.contact__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.contact__list-text {
+    margin-left: 10px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        color: $blue;
+    }
+}
+
+.contact__list-item {
+    padding: 7px 15px;
+}
+
+.navigate-mail {
+    width: 16px;
+    height: 11px;
+    fill: currentColor;
+    &:hover,
+    &:focus {
+        fill: currentColor;
+    }
+}
+
+.navigate-phone {
+    width: 10px;
+    height: 15px;
+    fill: currentColor;
+    &:hover,
+    &:focus {
+        fill: currentColor;
+    }
+}
+
+.link {
+    color: #757575;
+}
+
+.link:hover {
+    color: $blue;
+}

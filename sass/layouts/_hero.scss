@@ -1,0 +1,15 @@
+.hero__text {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    &-title {
+        margin: 0 auto;
+        font-size: 44px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        line-height: 60px;
+        color: #FFFFFF;
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
+}
