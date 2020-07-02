@@ -28,10 +28,20 @@
     letter-spacing: 0.01em;
     padding: 12px;
     padding-left: 42px;
-}
-
-.form__txt:focus {
-    border: 1px solid $blue;
+    &-label {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        transition-property: all;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:focus {
+        border: 1px solid $blue;
+    }
 }
 
 .form__txtarea {
@@ -46,16 +56,30 @@
     line-height: 16px;
     letter-spacing: 0.01em;
     resize: none;
-}
-
-.form__txtarea:focus {
-    border: 1px solid $blue;
+    &-label {
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        transition-property: all;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:focus {
+        border: 1px solid $blue;
+    }
 }
 
 .form__checkbox {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    &-link {
+        color: $blue;
+        text-decoration: underline;
+    }
 }
 
 .checkbox-text {
@@ -63,26 +87,9 @@
     letter-spacing: 0.03em;
 }
 
-.form__checkbox-link {
-    color: $blue;
-    text-decoration: underline;
-}
-
 .form__list-input,
 .form__list-input+.form__list-input {
     position: relative;
-}
-
-.form__txt-label {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__txt:focus+.form__txt-label,
@@ -91,18 +98,6 @@
     line-height: 14px;
     transform: translate(-30px, -30px);
     color: $blue;
-}
-
-.form__txtarea-label {
-    position: absolute;
-    top: 10%;
-    left: 3%;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__txtarea:focus+.form__txtarea-label,
@@ -117,14 +112,13 @@
     position: absolute;
     top: 14px;
     left: 16px;
-}
-
-.form__img-svg {
-    width: 12px;
-    height: 12px;
-    transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &-svg {
+        width: 12px;
+        height: 12px;
+        transition-property: all;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .form__txt:focus+.form__txt-label+.form__img {

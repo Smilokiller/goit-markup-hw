@@ -4,29 +4,26 @@
     padding: 0 15px;
     padding-top: 94px;
     margin: 0 auto;
-}
-
-.container-header {
-    padding: 0 15px;
+    &-header {
+        padding: 0 15px;
+    }
+    &-footer {
+        padding: 60px 15px;
+    }
+    &-hero {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header.png);
+        background-size: cover;
+        height: 600px;
+        max-width: 1920px;
+        padding-top: 0;
+    }
 }
 
 .container-about,
 .blocks-container,
 .cards-container {
     padding-bottom: 94px;
-}
-
-.container-footer {
-    padding: 60px 15px;
-}
-
-.container-hero {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header.png);
-    background-size: cover;
-    height: 600px;
-    max-width: 1920px;
-    padding-top: 0;
 }
