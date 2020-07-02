@@ -217,7 +217,7 @@ button {
   margin-bottom: 50px;
 }
 
-.buttons-list-link {
+.buttons__list-link {
   padding: 6px 22px;
   color: #212121;
   background: #F5F4FA;
@@ -231,7 +231,7 @@ button {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.buttons-list-link:hover, .buttons-list-link:focus {
+.buttons__list-link:hover, .buttons__list-link:focus {
   color: #fff;
   background: #2196F3;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -1121,6 +1121,21 @@ h6 {
   margin-right: -30px;
 }
 
+.examples__text {
+  padding: 20px 24px;
+}
+
+.examples__text-title {
+  margin-bottom: 4px;
+  text-transform: none;
+}
+
+.examples__text-text {
+  line-height: 1.8em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
 .examples__list {
   max-width: 400px;
   padding-right: 30px;
@@ -1138,21 +1153,6 @@ h6 {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.03em;
-}
-
-.examples__text {
-  padding: 20px 24px;
-}
-
-.examples__text-title {
-  margin-bottom: 4px;
-  text-transform: none;
-}
-
-.examples__text-text {
-  line-height: 1.8em;
-  letter-spacing: 0.03em;
-  font-weight: 400;
 }
 
 .examples__content {
