@@ -1,33 +1,104 @@
-.footer {
-    background: #2F303A;
-    &__list {
-        display: flex;
-        margin: 0 -34px;
-        &-item {
-            padding: 0 34px;
+    // .footer {
+    //     background: #2F303A;
+    //     &__list {
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         margin: 0 -34px;
+    //         &-item {
+    //             padding: 0 34px;
+    //         }
+    //         &-form {
+    //             margin-left: auto;
+    //         }
+    //     }
+    //     &__item {
+    //         &-adress {
+    //             line-height: 24px;
+    //             letter-spacing: 0.03em;
+    //             color: #FFFFFF;
+    //             font-weight: 400;
+    //             margin-bottom: 9px;
+    //         }
+    //         &-contact {
+    //             line-height: 24px;
+    //             letter-spacing: 0.03em;
+    //             color: rgba(255, 255, 255, 0.6);
+    //             font-weight: 400;
+    //             margin-bottom: 9px;
+    //         }
+    //         &-text:hover,
+    //         &-text:focus {
+    //             color: $blue;
+    //         }
+    //     }
+    // }
+    .footer {
+        background: #2F303A;
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            margin: 0 -34px;
+            &-item {
+                padding: 0 34px;
+                padding-bottom: 60px;
+            }
+            &-form {
+                margin-left: auto;
+                padding-bottom: 0;
+            }
         }
-        &-form {
-            margin-left: auto;
+        &__item {
+            &-adress {
+                line-height: 24px;
+                letter-spacing: 0.03em;
+                color: #FFFFFF;
+                font-weight: 400;
+                margin-bottom: 9px;
+            }
+            &-contact {
+                line-height: 24px;
+                letter-spacing: 0.03em;
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 400;
+                margin-bottom: 9px;
+            }
+            &-text:hover,
+            &-text:focus {
+                color: $blue;
+            }
         }
     }
-    &__item {
-        &-adress {
-            line-height: 24px;
-            letter-spacing: 0.03em;
-            color: #FFFFFF;
-            font-weight: 400;
-            margin-bottom: 9px;
-        }
-        &-contact {
-            line-height: 24px;
-            letter-spacing: 0.03em;
-            color: rgba(255, 255, 255, 0.6);
-            font-weight: 400;
-            margin-bottom: 9px;
-        }
-        &-text:hover,
-        &-text:focus {
-            color: $blue;
+    
+    .form {
+        display: block;
+    }
+    
+    @media screen and (min-width: 768px) {
+        .footer {
+            &__list {
+                justify-content: space-between;
+                &-form {
+                    margin: auto;
+                }
+            }
         }
     }
-}
+    
+    @media screen and (min-width: 1200px) {
+        .form {
+            display: flex;
+        }
+        .footer {
+            &__list {
+                text-align: start;
+                &-item {
+                    padding-bottom: 0
+                }
+                &-form {
+                    margin: 0;
+                }
+            }
+        }
+    }
