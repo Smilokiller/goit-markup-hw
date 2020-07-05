@@ -1,7 +1,13 @@
+.logo {
+    width: 141px;
+}
+
 .footer__item-logo {
     margin-bottom: 20px;
 }
 
-.logo {
-    width: 153px;
+@media screen and (min-width: 1200px) {
+    .logo {
+        width: 153px;
+    }
 }

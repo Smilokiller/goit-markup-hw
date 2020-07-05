@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -266,6 +267,8 @@ button {
   transition-property: color;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
+  font-size: 12px;
+  line-height: 14px;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -299,11 +302,32 @@ button {
 }
 
 .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #757575;
 }
 
 .link:hover {
   color: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.hidden-nav {
+  display: none;
 }
 
 .nav {
@@ -350,6 +374,14 @@ button {
 
 .nav__list-item:hover {
   color: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .hidden-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .social {
@@ -447,9 +479,10 @@ h6 {
 }
 
 .container__title {
+  text-transform: none;
   text-align: center;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 33px;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
@@ -463,16 +496,23 @@ h6 {
   display: block;
 }
 
+.logo {
+  width: 141px;
+}
+
 .footer__item-logo {
   margin-bottom: 20px;
 }
 
-.logo {
-  width: 153px;
+@media screen and (min-width: 1200px) {
+  .logo {
+    width: 153px;
+  }
 }
 
 .input {
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px;
   margin-bottom: 20px;
@@ -563,21 +603,6 @@ h6 {
   border: 1px solid #2196F3;
 }
 
-.form__checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
-}
-
-.form__checkbox-link {
-  color: #2196F3;
-  text-decoration: underline;
-}
-
 .checkbox-text {
   font-size: 12px;
   line-height: 14px;
@@ -625,6 +650,21 @@ h6 {
 
 .form__txt:focus + .form__txt-label + .form__img {
   fill: #2196F3;
+}
+
+.form__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form__checkbox-link {
+  color: #2196F3;
+  text-decoration: underline;
 }
 
 .form__checkbox-input {
@@ -721,6 +761,36 @@ h6 {
   font-weight: normal;
 }
 
+/* скрываем чекбокс */
+#menu__toggle {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+}
+
+/* стилизуем кнопку */
+.menu__toggle + label::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* используем flex для центрирования содержимого */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* центрируем содержимое кнопки */
+  top: 22px;
+  right: 22px;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  z-index: 1;
+  background-image: url("../images/menu_24px.svg");
+}
+
+.menu__toggle:focus + label::before {
+  background-image: url("../images/menu_24px_blue.svg");
+}
+
 .container {
   max-width: 480px;
   width: 100%;
@@ -744,6 +814,7 @@ h6 {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/header.png);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header.png);
   background-size: cover;
+  background-position: center;
   height: 400px;
   max-width: 768px;
   padding-top: 0;
@@ -807,9 +878,16 @@ h6 {
 }
 
 .header__item-logo {
-  max-width: 153px;
+  padding: 16px 42px;
+  max-width: 141px;
   width: 100%;
   margin-right: 85px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__item-logo {
+    max-width: 153px;
+  }
 }
 
 .hero__text {
@@ -1006,6 +1084,8 @@ h6 {
 }
 
 .cards__list {
+  min-width: 150px;
+  max-width: 210px;
   margin: 15px;
 }
 
@@ -1013,7 +1093,8 @@ h6 {
   border: 1px solid #AFB1B8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 210px;
+  min-width: 150px;
+  max-width: 210px;
   height: 90px;
   border-radius: 4px;
   display: -webkit-box;
@@ -1092,8 +1173,8 @@ h6 {
 }
 
 .footer__list-form {
-  margin-left: auto;
   padding-bottom: 0;
+  width: 100%;
 }
 
 .footer__item-adress {
@@ -1128,6 +1209,7 @@ h6 {
   }
   .footer__list-form {
     margin: auto;
+    width: 450px;
   }
 }
 
@@ -1145,6 +1227,7 @@ h6 {
   }
   .footer__list-form {
     margin: 0;
+    width: auto;
   }
 }
 

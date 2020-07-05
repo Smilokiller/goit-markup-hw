@@ -1,5 +1,6 @@
 .input {
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     height: 50px;
     padding: 15px;
     margin-bottom: 20px;
@@ -75,16 +76,6 @@
     }
 }
 
-.form__checkbox {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    &-link {
-        color: $blue;
-        text-decoration: underline;
-    }
-}
-
 .checkbox-text {
     font-size: 12px;
     line-height: 14px;
@@ -126,6 +117,16 @@
 
 .form__txt:focus+.form__txt-label+.form__img {
     fill: $blue;
+}
+
+.form__checkbox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    &-link {
+        color: $blue;
+        text-decoration: underline;
+    }
 }
 
 .form__checkbox-input {
