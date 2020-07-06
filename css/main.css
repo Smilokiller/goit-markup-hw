@@ -141,6 +141,7 @@ table {
 
 html,
 body {
+  padding-top: 65px;
   height: 100%;
   width: 100%;
   margin: 0px;
@@ -161,6 +162,12 @@ body {
   height: 100%;
   background: #fff;
   color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 0;
+  }
 }
 
 footer {
@@ -935,8 +942,10 @@ h6 {
 }
 
 @media screen and (min-width: 768px) {
-  .header__item-logo {
+  .header {
     position: unset;
+  }
+  .header__item-logo {
     margin-right: 85px;
   }
   .header__items {
