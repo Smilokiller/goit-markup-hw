@@ -1,26 +1,56 @@
-    /* скрываем чекбокс */
-    
-    #menu__toggle {
-        pointer-events: none;
-        opacity: 0;
-        position: absolute;
+.burger__button {
+    display: inline-flex;
+    margin: auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.burger__button:hover .icon__cross {
+    fill: $blue;
+}
+
+.burger__button:hover .icon__menu {
+    fill: $blue;
+}
+
+.icon__menu {
+    display: none;
+}
+
+.burger__button.is-open .icon__menu {
+    display: block;
+}
+
+.burger__button.is-open .icon__cross {
+    display: none;
+}
+
+.hidden-nav {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+    &.is-open {
+        display: block;
     }
-    /* стилизуем кнопку */
-    
-    .menu__toggle+label::before {
+}
+
+@media screen and (min-width: 768px) {
+    .burger__button {
+        display: none;
+    }
+    .hidden-nav {
         display: flex;
-        /* используем flex для центрирования содержимого */
-        align-items: center;
-        /* центрируем содержимое кнопки */
-        top: 22px;
-        right: 22px;
-        width: 24px;
-        height: 16px;
-        cursor: pointer;
-        z-index: 1;
-        background-image: url("../images/menu_24px.svg");
+        position: unset;
+        padding: 0;
+        box-shadow: unset;
     }
-    
-    .menu__toggle:focus+label::before {
-        background-image: url("../images/menu_24px_blue.svg");
-    }
+}

@@ -14,55 +14,63 @@
 <body>
     <header class="header">
         <div class="container container-header">
-            <ul class="header__items">
-                <li class="header__item header__item-logo">
+            <div class="header__items">
+                <div class="header__item header__item-logo">
                     <a href="/" class="logo">
                         <img src="./images/webstudio.svg" alt="web studio">
                     </a>
-                </li>
-                <li class="header__item header__item-nav hidden-nav">
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__list-item">
-                                <a href="" class="nav__list-link in--active">Студия</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a href="portfolio.html" class="nav__list-link">Портфолио</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a href="" class="nav__list-link">Контакты</a>
-                            </li>
-                        </ul>
+                </div>
+                <div class="hidden-nav" data-menu>
+                    <div class="header__item header__item-nav">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__list-item">
+                                    <a href="" class="nav__list-link in--active">Студия</a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="portfolio.html" class="nav__list-link">Портфолио</a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="" class="nav__list-link">Контакты</a>
+                                </li>
+                            </ul>
 
-                    </nav>
-                </li>
-                <li class="header__item hidden-nav">
-                    <ul class="contact__list">
-                        <li class="contact__list-item">
-                            <a href="mailto:info@devstufio.com" class="link">
-                                <svg class="navigate-mail">
+                        </nav>
+                    </div>
+                    <div class="header__item ">
+                        <ul class="contact__list">
+                            <li class="contact__list-item">
+                                <a href="mailto:info@devstufio.com" class="link">
+                                    <svg class="navigate-mail">
                                     <use xlink:href="./images/symbol-defs.svg#icon-envelope">
                                     </use>
                                 </svg>
-                                <span class="contact__list-text">info@devstufio.com</span>
-                            </a>
-                        </li>
-                        <li class="contact__list-item">
-                            <a href="tel:+380961111111" class="link">
-                                <svg class="navigate-phone">
+                                    <span class="contact__list-text">info@devstufio.com</span>
+                                </a>
+                            </li>
+                            <li class="contact__list-item">
+                                <a href="tel:+380961111111" class="link">
+                                    <svg class="navigate-phone">
                                     <use xlink:href="./images/symbol-defs.svg#icon-smartphone">
                                     </use>
                                 </svg><span class="contact__list-text">+38 096 111 11 11</span></a>
-                    </ul>
-                    </li>
-            </ul>
-
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label for="checkbox" class="menu__btn" for="menu__toggle">
-                  <span></span>
-                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__item burger">
+                    <button type="button" class="burger__button is-open" aria-expanded="false" data-menu-button>
+                            <span >
+                                <svg class="icon"  width="18" height="18">
+                                    <use class="icon__cross" xlink:href="./images/symbol-burger.svg#icon-close_24px"></use>
+                                    <use class="icon__menu" xlink:href="./images/symbol-burger.svg#icon-menu_24px"></use>
+                                </svg>
+                            </span>
+                        </button>
+                </div>
             </div>
+
+
     </header>
 
 
@@ -132,15 +140,15 @@
                 <h2 class="container__title">Чем мы занимаемся</h2>
                 <ul class="about">
                     <li class="about__list">
-                        <img src="./images/desktop.png" alt="desktop" />
+                        <img src="./images/desktop.png" srcset="./images/desktop@2x.png 2x" alt="desktop" />
                         <h3 class="about__list-link">Десктопные приложения</h3>
                     </li>
                     <li class="about__list">
-                        <img src="./images/phone.png" alt="phone" />
+                        <img src="./images/phone.png" srcset="./images/phone@2x.png 2x" alt="phone" />
                         <h3 class="about__list-link">Мобильные приложения</h3>
                     </li>
                     <li class="about__list">
-                        <img src="./images/monitor.png" alt="monitor" />
+                        <img src="./images/monitor.png" srcset="./images/monitor@2x.png 2x" alt="monitor" />
                         <h3 class="about__list-link">Дизайнерские решения</h3>
                     </li>
                 </ul>
@@ -153,7 +161,7 @@
                 <ul class="blocks">
                     <li class="blocks__list">
                         <div class="blocks__img">
-                            <img src="./images/john.png" alt="Николай Кучеренко" />
+                            <img src="./images/john.png" srcset="./images/john@2x.png 2x" alt="Николай Кучеренко" />
                         </div>
                         <h3 class="blocks__list-title">Николай Кучеренко</h3>
                         <p class="blocks__list-text">Product Designer</p>
@@ -183,7 +191,7 @@
                     </li>
                     <li class="blocks__list">
                         <div class="blocks__img">
-                            <img src="./images/marta.png" alt="Ольга Иванова" />
+                            <img src="./images/marta.png" srcset="./images/marta@2x.png 2x" alt="Ольга Иванова" />
                         </div>
                         <h3 class="blocks__list-title">Ольга Иванова</h3>
                         <p class="blocks__list-text">Frontend Developer</p>
@@ -213,7 +221,7 @@
                     </li>
                     <li class="blocks__list">
                         <div class="blocks__img">
-                            <img src="./images/robert.png" alt="Андрей Шевченко" />
+                            <img src="./images/robert.png" srcset="./images/robert@2x.png 2x" alt="Андрей Шевченко" />
                         </div>
                         <h3 class="blocks__list-title">Андрей Шевченко</h3>
                         <p class="blocks__list-text">Marketing</p>
@@ -243,7 +251,7 @@
                     </li>
                     <li class="blocks__list">
                         <div class="blocks__img">
-                            <img src="./images/martin.png" alt="Иван Николаев" />
+                            <img src="./images/martin.png" srcset="./images/martin@2x.png 2x" alt="Иван Николаев" />
                         </div>
                         <h3 class="blocks__list-title">Иван Николаев</h3>
                         <p class="blocks__list-text">UI Designer</p>
@@ -281,32 +289,32 @@
 
                 <ul class="cards">
                     <li class="cards__list">
-                        <a href="" class="cards__list-link"><svg class="cards__list-svg">
+                        <a href="" class="cards__list-link"><svg class="cards__list-svg" width="44.27" height="49.23">
                                 <use xlink:href="./images/symbol-defs.svg#icon-logo1"></use>
                             </svg> </a>
                     </li>
                     <li class="cards__list">
-                        <a href="" class="cards__list-link"><svg class="cards__list-svg">
+                        <a href="" class="cards__list-link"><svg class="cards__list-svg" width="40" height="52">
                                 <use xlink:href="./images/symbol-defs.svg#icon-logo2"></use>
                             </svg> </a>
                     </li>
                     <li class="cards__list">
-                        <a href="" class="cards__list-link"><svg class="cards__list-svg">
+                        <a href="" class="cards__list-link"><svg class="cards__list-svg" width="41" height="42.6">
                                 <use xlink:href="./images/symbol-defs.svg#icon-logo3"></use>
                             </svg> </a>
                     </li>
                     <li class="cards__list">
-                        <a href="" class="cards__list-link"><svg class="cards__list-svg">
+                        <a href="" class="cards__list-link"><svg class="cards__list-svg" width="80" height="42">
                                 <use xlink:href="./images/symbol-defs.svg#icon-logo4"></use>
                             </svg> </a>
                     </li>
                     <li class="cards__list">
-                        <a href="" class="cards__list-link"><svg class="cards__list-svg">
+                        <a href="" class="cards__list-link"><svg class="cards__list-svg" width="59" height="47">
                                 <use xlink:href="./images/symbol-defs.svg#icon-logo5"></use>
                             </svg> </a>
                     </li>
                     <li class="cards__list">
-                        <a href="" class="cards__list-link"><svg class="cards__list-svg">
+                        <a href="" class="cards__list-link"><svg class="cards__list-svg" width="88.5" height="45.5">
                                 <use xlink:href="./images/symbol-defs.svg#icon-logo6"></use>
                             </svg> </a>
                     </li>
@@ -451,6 +459,8 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+
 </body>
 
 </html>

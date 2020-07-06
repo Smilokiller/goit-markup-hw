@@ -1,54 +1,62 @@
-.container {
-    max-width: 480px;
-    width: 100%;
-    padding: 0 15px;
-    padding-top: 60px;
-    margin: 0 auto;
-    &-header {
-        padding: 0 15px;
-    }
-    &-footer {
-        padding: 60px 15px;
-    }
-    &-hero {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header.png);
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-        max-width: 768px;
-        padding-top: 0;
-    }
-}
-
-.container-about,
-.blocks-container,
-.cards-container,
-.container-items {
-    padding-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        &-hero {
-            height: 400px;
-            max-width: 1200px;
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-        &-hero {
-            height: 600px;
-            max-width: 1920px;
-        }
-    }
-    .container-items {
-        padding-bottom: 0;
-    }
-}
+            .container {
+                max-width: 480px;
+                width: 100%;
+                padding: 0 15px;
+                padding-top: 60px;
+                margin: 0 auto;
+                &-header {
+                    padding: 0 15px;
+                }
+                &-footer {
+                    padding: 60px 15px;
+                }
+                &-hero {
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header.png);
+                    background-size: cover;
+                    background-position: center;
+                    height: 400px;
+                    max-width: 768px;
+                    padding-top: 0;
+                }
+            }
+            
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                .container-hero {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header@2x.png);
+                }
+            }
+            
+            .container-about,
+            .blocks-container,
+            .cards-container,
+            .container-items {
+                padding-bottom: 60px;
+            }
+            
+            @media screen and (min-width: 768px) {
+                .container {
+                    max-width: 768px;
+                    &-hero {
+                        height: 400px;
+                        max-width: 1200px;
+                    }
+                }
+            }
+            
+            @media screen and (min-width: 1200px) {
+                .container {
+                    max-width: 1200px;
+                    &-hero {
+                        height: 600px;
+                        max-width: 1920px;
+                    }
+                }
+                .container-items {
+                    padding-bottom: 0;
+                }
+            }
